@@ -57,7 +57,7 @@
           }
 
           // #2-1 基礎運用
-          console.log(1);
+          // console.log(1);
 
           // #2-2 串接
           // promiseSetTimeout(1)
@@ -73,21 +73,37 @@
 
 
           // #2-3 失敗捕捉
-          promiseSetTimeout(0)
+          // promiseSetTimeout(0)
+          //   .then(res => {
+          //     console.log(res);
+          //   })
+          //   .catch(err => {
+          //     console.log(err);
+          //   })
+
+
+          // #3 實戰取得遠端資料
+          // #3-1
+          // https://github.com/axios/axios
+          // console.dir(axios);
+          // axios.get('https://randomuser.me/api/')
+          //   .then(res => {
+          //     console.log(res);
+          //     return axios.get('https://randomuser.me/api/')
+          //   })
+          //   .then(res => {
+          //     console.log(res);
+          //   })
+
+          // #3-2 記得捕捉錯誤，Axios 錯誤捕捉技巧
+          // https://randomuser.me/
+          axios.get('https://randomuser.me/1')
             .then(res => {
               console.log(res);
             })
             .catch(err => {
               console.log(err);
             })
-
-
-// #3 實戰取得遠端資料
-// #3-1
-// https://github.com/axios/axios
-
-// #3-2 記得捕捉錯誤，Axios 錯誤捕捉技巧
-// https://randomuser.me/
 
         </script>
         <!-- 🙇🙇練習結束🙇🙇 -->
