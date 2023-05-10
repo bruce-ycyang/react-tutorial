@@ -34,13 +34,15 @@
             const App = () => {
               const [arr, setArr] = useState([1, 2, 3]);
 
-              // #5-1 如果有非同步、週期式事件可能會重複性觸發
               function removeItem() {
                 console.log(arr.filter((item) => item !== arr.length));
                 setArr(arr.filter((item) => item !== arr.length));
               }
               const addItem = () => setArr([...arr, arr.length + 1]);
-
+              // #5-1 如果有非同步、週期式事件可能會重複性觸發
+              // setInterval(() => {
+              //   console.log("setInterval"), 1000;
+              // });
               // #5-2 請確保 setState 是放在元件最外層
 
               return (
